@@ -1,0 +1,35 @@
+.i-icon {
+    &::before {
+        font-family: $icomoon;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 22px;
+    }
+    &.male::before {
+        content: '\e905';
+    }
+    &.female::before {
+        content: '\e904'; 
+    }
+    &.genderless::before {
+        content: '\e903';
+    }
+    &.unknown::before {
+        content: '\e906';
+    }
+    &.star::before {
+        content: '\e908';
+    }
+    &.search::before {
+        content: '\e907';
+    }
+    &.right-arrow::before {
+        content: '\e900';
+    }
+    &.left-arrow::before {
+        content: '\e902';
+    }
+    &.down-arrow::before {
+        content: '\e901';
+    }
+}

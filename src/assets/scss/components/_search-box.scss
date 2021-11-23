@@ -1,0 +1,106 @@
+// global stylling for search input
+.search-input {
+    height: 40px;
+
+    .p-inputtext {
+        border-radius: 0 0 12px 12px;
+        height: 40px;
+        width: 100%;
+        font-family: 'Poppins', sans-serif;
+        color: $teal;
+        font-weight: 500;
+
+        @include mobile {
+            max-width: 120px;
+            border-radius: 0 12px 12px 0;
+        }
+
+        @include tablet {
+            max-width: 200px;
+        }
+    }
+
+    > i:last-of-type {
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
+        margin: 0;
+        color: $mainBlue;
+        font-weight: 800;
+    }
+}
+
+//global styling for select
+.p-treeselect  {
+    height: 40px;
+    border-radius: 0 12px 0 0;
+    border-bottom-color: transparent;
+    width: 100%;
+    font-weight: 500;
+
+    @include mobile {
+        width: 130px;
+        border-right-color: transparent;
+        border-bottom-color: $lightGray;
+        border-radius: 0;
+    }
+
+    .p-treeselect-trigger-icon::before {
+        font-family: $icomoon;
+        content: '\e901';
+    }
+}
+
+//global styling for select dropdown
+.p-treeselect-panel  {
+    border: 1px solid #ced4da;
+    border-radius: 0 0 12px 12px;
+    box-shadow: none;
+    overflow: hidden;
+
+    .p-treeselect-items-wrapper {
+        width: 100%;
+        border-radius: 0 0 13px 13px;
+
+        @include mobile {
+            width: 130px;
+        }
+    
+        .p-tree-selectable{
+            padding: 0;
+    
+            .p-treenode {
+                padding: 0;
+    
+                .p-treenode-content {
+                    padding: 0.5rem;
+                    border-bottom: 1px solid #ced4da;
+                    border-radius: 0;
+                    border-top: none;
+                    font-weight: 500;
+                    
+                    &:hover {
+                        background-color: $lightBlue !important;
+                    }
+
+                    &.p-highlight {
+                        background-color: $lightBlue;
+                    }
+    
+    
+                    .p-tree-toggler {
+                        display: none;
+                    }
+        
+                    .p-treenode-icon {
+                        display: none;
+                    }
+                }
+
+                &:last-of-type .p-treenode-content {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
